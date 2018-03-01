@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>登录页面</title>
+	<link rel="stylesheet" href="login.css" />
+	<link rel="stylesheet" href="iconfont.css" />
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+<body>
+	
+	<div class="login-fir">
+		<div class="login-head">
+			<img src="images/shopex.png" alt="" />
+		</div>
+		<div class="center">
+			<div class="cen-top">
+				<div class="cen-top-bg">
+					<img src="images/ecshop-logo.png" alt="" />
+				</div>
+			</div>
+			<div class="cen-con">
+				<div class="login-inp">
+					<h3 class="login-hd"></h3>
+					<div class="inp-fir">
+						<span class="iconfont">&#xe677;</span>
+						<input type="text" placeholder="用户名" id="username"/ >
+					</div>
+					<div class="inp-two">
+						<span class="iconfont">&#xe64e;</span>
+						<input type="password" placeholder="密码" id="psw"/>
+					</div>
+					<div class="inp-thr">
+						<input type="button" value="登录" onclick="login()"/>
+					</div>
+					<div class="inp-fou">
+						<input type="checkbox" id="chebox"/>
+						<label for="chebox" style="color:#333">保存登录信息</label>
+						<a href="" style="margin-left:25px;color:cornflowerblue">忘记密码？</a>
+						<a href="" style="margin-left:31px;color:cornflowerblue">去店铺首页>></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	function login(){
+		$.ajax({
+			url: "/api/login",
+			type: "post",
+			data: {
+				username: $("#username").val(),
+				psw: $("#psw").val()
+			},
+			success: function(res) {
+				console.log(res);
+				if(res.status==1){
+					console.log("登录成功");
+					location.href = "http://localhost:8080/houtai";
+				}else{
+					alert(res.message);
+				}
+			}
+		})
+	}
+
+</script>

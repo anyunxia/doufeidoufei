@@ -1,0 +1,166 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:12px; font-family:"微软雅黑";}
+input,a{outline:none;}
+body,html{
+	height:100%;
+}
+
+.login-fir{
+	width:100%;
+	height:100%;
+	background: #555 url(../images/ecshop-bg.png) no-repeat center center;
+	background-size:cover;
+	position:relative;	
+}
+.login-head{
+	height:44px;
+	padding:40px 0 40px 50px;
+}
+.center{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 475px;
+    height:600px;
+    margin: auto auto;
+    transform: translateY(-50%);
+}
+.center .cen-top{
+	width: 380px;
+    margin: 0 auto;
+}
+.cen-top-bg img{
+	width:248px;
+	height:65px;
+	margin-left:66px;
+	
+}
+.center .cen-con{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 42px;
+    height: 350px;
+    margin-top: 50px;
+}
+.center .login-inp{
+	position:absolute;
+	left:16px;
+	z-index:2;
+	width:302px;
+	background: rgba(255,255,255,.85);
+    border: none;
+    border-radius: 0;
+    color: #A1A1A1;
+    padding: 5px 70px 25px;
+    overflow: hidden;
+    height: 322px;
+}
+.center .login-hd{
+	padding-bottom: 10px;
+    line-height: 1;
+    font-size: 18px;
+    margin: 18px 0;
+    text-align: center;
+    font-weight: normal;
+    color: #41A5E1 !important;
+}
+.center .inp-fir{
+	position: relative;
+    height: 51px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+    background: #fff;
+}
+.center .inp-fir .iconfont{
+	display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    z-index: 10;
+    font-size:20px;
+}
+.center .inp-fir input{
+    border: none;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    line-height: 47px;
+    text-indent: 50px;
+}
+.center .inp-two{
+	position: relative;
+    height: 51px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+    background: #fff;
+}
+.center .inp-two .iconfont{
+	display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    z-index: 10;
+    font-size:20px;
+}
+.center .inp-two input{
+	border: none;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    color: #333;
+    line-height: 47px;
+    text-indent: 50px;
+}
+.center .inp-thr{
+	position: relative;
+    height: 51px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    background: hotpink;
+    border-radius: 2px;
+    margin-top:28px;
+}
+.center .inp-thr input{
+	cursor: pointer;
+    width: 100%;
+    display: block;
+    color: #FFF;
+    width: 302px;
+    font-size: 16px;
+    line-height: 51px;
+    text-align: center;
+    background-color: #fc7878;
+    border: 0;
+    border-radius: 4px;
+    letter-spacing: 4px;
+}
+.center .inp-fou{
+	margin-top: 12px;
+    overflow: hidden;
+    height: auto;
+    position:relative;
+}
+.center .inp-fou input{
+	float: left;
+	width: 15px;
+    height: 15px;
+    margin: 2px 8px 0 0;
+}

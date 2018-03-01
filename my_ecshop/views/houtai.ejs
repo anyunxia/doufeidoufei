@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>greenroom</title>
+	<link rel="stylesheet" href="houtai.css" />
+	<link rel="stylesheet" href="iconfont.css" />
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="head">
+		<img src="images/topLogo.png" alt="" />
+		<ul>
+			<li class="li-fir">
+				<span class="iconfont">&#xe60f;</span>
+				<a href="">更多模板堂产品</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe6ba;</span>
+				<a href="">开店向导</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe795;</span>
+				<a href="">记事本</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe6af;</span>
+				<a href="">刷新</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe62c;</span>
+				<a href="">个人设置</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe748;</span>
+				<a href="">管理员留言</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe6af;</span>
+				<a href="">查看网店</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe64a;</span>
+				<a href="">帮助</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe602;</span>
+				<a href="">关于ECSHOP</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe507;</span>
+				<a href="">清除缓存</a>
+			</li>
+			<li>
+				<span class="iconfont">&#xe659;</span>
+				<a href="">退出</a>
+			</li>
+		</ul>
+	</div>
+	<div class="nav">
+		<ul>
+			<li class="nav-d">
+				<span class="iconfont">&#xe616;</span>
+				<a href="">起始页</a>
+				
+			</li>
+			<li class="nav-d">
+				<span class="iconfont">&#xe6a9;</span>
+				<a href="">设置导航栏</a>
+				
+			</li>
+			<li class="nav-ch">
+				<span class="iconfont">&#xe65a;</span>
+				<a href="">商品管理</a>
+				<b>32</b>
+				
+			</li>
+			<li class="nav-ch">
+				<span class="iconfont">&#xe60f;</span>
+				<a href="">订单管理</a>
+				<b>0</b>
+				
+			</li>
+			<li class="nav-ch">
+				<span class="iconfont">&#xe6db;</span>
+				<a href="">广告管理</a>
+				<b>0</b>
+				
+			<li class="nav-ch">
+				<span class="iconfont">&#xe60e;</span>
+				<a href="">用户评论</a>
+				<b>0</b>
+				
+			</li>
+			
+		</ul>
+		<div class="nav-rig">
+			<a href="">用户评论</a>
+			<a href="">商品列表</a>
+			<a href="">会员列表</a>
+			<a href="">商店设置</a>
+			<a href="">移动版</a>
+			<a href="">服务市场</a>
+			<a href="">商品回收站</a>
+			<a href="">添加新商品</a>
+		</div>
+		
+	</div>
+	<div class="content">
+		<div class="con-left">
+			<ul>
+				<li class="con-left-nav">导航菜单</li>
+				<li class="pub" id="con-left-goods">
+					<span class="iconfont">&#xe65a;</span>
+					<a href="">商品管理</a>
+					<b>+</b>
+				</li>
+				<li class="list" style="display:none;">
+					<ul>
+						
+						<li><a target="mainContent" href="addgoods.html">添加新商品</a></li>
+						<li><a target="mainContent" href="http://localhost:8080/goods_list">商品列表</a></li>
+						<li>商品分类</li>
+						<li>用户评论</li>
+					</ul>
+					
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe60f;</span>
+					<a href="">促销管理</a>
+					<b>+</b>
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe795;</span>
+					<a href="">订单管理</a>
+					<b>+</b>
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe60f;</span>
+					<a href="">促销管理</a>
+					<b>+</b>
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe795;</span>
+					<a href="">订单管理</a>
+					<b>+</b>
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe60f;</span>
+					<a href="">促销管理</a>
+					<b>+</b>
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe795;</span>
+					<a href="">订单管理</a>
+					<b>+</b>
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe60f;</span>
+					<a href="">促销管理</a>
+					<b>+</b>
+				</li>
+				<li class="pub">
+					<span class="iconfont">&#xe795;</span>
+					<a href="">订单管理</a>
+					<b>+</b>
+				</li>
+			</ul>
+		</div>
+		<iframe name="mainContent" id="mainContent" style="width:86.3%;height:100%" src="http://localhost:8080/goods_list"></iframe>
+		
+	</div>
+</body>
+</html>
+<script>
+	$("#con-left-goods").click(function(){
+		$(".list").slideToggle(50).siblings(".list").slideUp("slow");
+	})
+</script>
+
+<script>
+	
+   $(".center .nav li").click(function(){
+   	$(".center .nav li").css("background-color","#eaeaea");
+   	$(this).css("background-color","#fff");
+   	$(".content-m div").css("display","none");
+   	var index = $(this).index();
+   	$(".content-m div").eq(index).css("display","block");
+   	
+   	
+   })
+ 
+
+</script>
+<script>
+	function addGoods(){
+		document.getElementById("frm").submit();
+	}
+</script>
+
+	
+	
+

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="houtai.css" />
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="con-right">
+			<div class="addnewgoods" style=""><!--添加新商品-->
+				<div class="main-top">
+					<a class="top-l" href="">ECSHOP 管理中心-添加新商品</a>
+					<img src="images/jnsy.png" alt="" />
+					<p><a href="">+</a>商品列表</p>
+				</div>
+				<div class="center">
+					<ul class="nav">
+						<li style="background-color:#fff;">通用信息</li>
+						<li>详细描述</li>
+						<li>其他信息</li>
+						<li>商品属性</li>
+						<li>商品相册</li>
+						<li>关联商品</li>
+						<li>配件</li>
+						<li>关联文章</li>
+					</ul>
+				
+					<div class="content-m" >
+						<div class="con-fir" style="display: block;">
+							<form id="frm" action="/api/add_goods" method="post" enctype="multipart/form-data">
+							<p>
+								商品名称：<input type="text" name="goods_name" id="goods_name"/>
+								<select name="" id="" style="border-color:#0086B3">字体样式
+									<option value="">字体样式</option>
+									<option value="">加粗</option>
+									<option value="">倾斜</option>
+									<option value="">删除线</option>
+									<option value="">下划线</option>
+								</select>
+							</p>
+							<p>
+								商品货号：<input type="text" name="artno" id="artno"/><br />
+								<a style="margin-left: 60px;" href="">如果您不输入货品货号，系统将自动生成一个唯一的货号</a>
+							</p>
+							<p>
+								商品分类：<select name="" id="" style="border-color:#0086B3;width:154px">请选择
+									<option value="">请选择</option>
+									<option value="">短袖</option>
+									<option value="">长袖</option>
+									<option value="">衬衫</option>
+									<option value="">牛仔裤</option>
+									<option value="">砖石</option>
+									<option value="">短袖</option>
+									<option value="">长袖</option>
+									<option value="">衬衫</option>
+									<option value="">牛仔裤</option>
+								</select>
+								<a class="tjfl" href="">添加分类</a>
+							</p>
+							<p>
+								扩展分类：<a class="kzfl" href="">添加</a>
+							</p>
+							<p>
+								商品品牌：<select name="" id="" style="border-color:#0086B3;width:100px">请选择
+									<option value="">请选择</option>
+									<option value="">短袖</option>
+									<option value="">长袖</option>
+									<option value="">衬衫</option>
+									<option value="">牛仔裤</option>
+									<option value="">砖石</option>
+									<option value="">短袖</option>
+									<option value="">长袖</option>
+									<option value="">衬衫</option>
+									<option value="">牛仔裤</option>
+								</select>
+								<a class="tjfl" href="">添加分类</a>
+							</p>
+							<p>
+								本店售价：<input type="text" value="0" style="width:134px;" name="price" id="price"/>
+								<a class="count" href="">按市场价计算</a>
+							</p>
+							<p>
+								会员价格：注册用户：<input type="text" placeholder="-1" style="width:60px;"/>
+										代销用户：<input type="text" placeholder="-1" style="width:60px;"/>	
+										vip：<input type="text" placeholder="-1" style="width:60px;"/><br />
+										<a style="margin-left: 60px;" href="">会与那价格为-1时表示会员价格按照会员等级折扣率计算。你也可以为每个等级指定一个固定价格</a>
+							</p>
+							<p>
+								商品优惠价格：[+]优惠数量：<input type="text" placeholder="-1" style="width:60px;"/>
+										优惠价格：<input type="text" placeholder="-1" style="width:60px;"/><br />
+										<a style="margin-left: 83px;" href="">购买数量达到优惠数量时享受的优惠价格</a>
+							</p>
+							<p>
+								市场售价：<input type="text" value="0" style="width:134px;"/>
+								<a class="count" href="">取整数</a>
+							</p>
+							<p>
+								虚拟销量：<input type="text" value="0" style="width:134px;" name="sales" id="sales"/>
+								
+							</p>
+							<p>
+								赠送消费积分数：<input type="text" value="-1" style="width:134px;"/><br />
+								<a style="margin-left:93px;" href="">购买该商品是赠送消费积分数，-1表示按商品价格赠送</a>
+							</p>
+							<p>
+								赠送等级积分数：<input type="text" value="-1" style="width:134px;"/><br />
+								<a style="margin-left: 93px;" href="">购买该商品是赠送等级积分数，-1表示按商品价格赠送</a>
+							</p>
+							<p>
+								积分购买金额：<input type="text" value="0" style="width:134px;"/><br />
+								<a style="margin-left: 93px;" href="">(此处需填写金额)购买该商品是最多可用的积分金额</a>
+							</p>
+							<p>
+								<input type="checkbox" />促销价：<input type="text" value="0" style="width:134px;"/>
+							</p>
+							<p>
+								促销日期：<input type="text" value="2018-02-27" style="width:70px;"/>
+										<a class="date" href="">选择</a>-
+										<input type="text" value="2018-03-27" style="width:70px;"/>
+										<a class="date" href="">选择</a>
+										
+							</p>
+							<p class="uploading">
+								上传商品图片：<input type="file" value="选择文件" name="img" id="img"/><br />
+								<input type="text" style="width:280px;margin-left:84px"/>
+							</p>
+							<p class="suol">
+								上传商品缩略图：<input type="file" value="选择文件"/><br />
+								<input type="text" style="width:280px;margin-left:84px"/><br />
+								<input style="margin-left:80px" type="checkbox" checked/>自动生成商品缩略图
+							</p>
+							<button class="but butt" onclick="addGoods()">确定</button>
+							<button class="but">重置</button>
+							</form>
+						</div>
+						<div class="con-two">
+							<img src="images/fff.jpg" alt="" />
+							<span>确定</span>
+							<span>重置</span>
+						</div>
+						<div class="con-two con-t">
+							<p>
+								商品重量：<input type="text" />
+								<select name="">千克
+									<option value="">千克</option>
+									<option value="">克</option>
+								</select>
+							</p>
+							<p>
+								商品库存数量：<input type="text" value="1"/><br />
+								<a href="">库存在商品为虚货或商品存在货品时为不可编辑状态，库存数量取决于</a>
+							</p>
+							<p>
+								商品警告数量：<input type="text" value="1"/><br />
+							</p>
+							<p>
+								加入推荐：<input type="checkbox" />精品
+								<input type="checkbox" />新品
+								<input type="checkbox" />热销
+							</p>
+							<p>
+								上架：<input type="checkbox" checked/>打钩表示允许销售，否则不允许销售
+							</p>
+							<p>
+								能作为普通商品销售：<input type="checkbox" checked/>打钩表示允许销售，否则不允许销售
+							</p>
+							<p>
+								是否为免运费商品:<input type="checkbox"/>打钩表示此商品不会产生运费花销，否则按照正常运费计算
+							</p>
+							<p>
+								商品关键词：<input type="text" style="width:150px"/>用空格分割
+							</p>
+							<p>
+								商品简单描述：<textarea name="" id="" cols="30" rows="3" style="overflow: scroll;vertical-align: top;"></textarea>
+							</p>
+							<p>
+								商家备注：<textarea name="" id="" cols="30" rows="3" style="overflow: scroll;vertical-align: top;"></textarea><br />
+								<a href="">仅供商家自己看的信息</a>
+							</p>
+							<span>确定</span>
+							<span>重置</span>
+						</div>
+						<div class="con-two con-f">
+							<p>
+								商品类型：<select name="" id="" style="margin-bottom:10px">请选择商品类型
+									<option value="">请选择商品类型</option>
+									<option value="">手机</option>
+									<option value="">书</option>
+									<option value="">电影</option>
+								</select><br />
+								<a href="">请选择商品的所属类型，进而完善此商品的属性</a>
+							</p>
+							<span>确定</span>
+							<span>重置</span>
+						</div>
+						<div class="con-two con-img">
+							<h3>
+								[+]图片描述<input type="text" style="width:120px"/>上传文件<input type="text" style="width:120px"/>
+								<input type="text" value="浏览..." style="background: #888;border-radius: 3px;"/>
+								<input type="text" placeholder="或者输入外部图片链接地址"/>
+							</h3>
+							<span>确定</span>
+							<span>重置</span>
+						</div>
+						<div class="con-two con-relevance">
+							<h3>
+								<select name="" id="" style="width:138px">所有分类
+										<option value="">所有分类</option>
+										<option value="">手机</option>
+										<option value="">书</option>
+										<option value="">电影</option>
+								</select>
+								<select name="" id="" style="width:138px">所有品牌
+										<option value="">所有品牌</option>
+										<option value="">手机</option>
+										<option value="">书</option>
+										<option value="">电影</option>
+								</select>
+								<input type="text" />
+								<a href="">搜索</a>
+							</h3>
+							<b>可选商品</b>
+							<b>操作</b>
+							<b>跟该商品关联的商品</b>
+							<h4 class="le"></h4>
+							<h4 class="ce">
+								<input type="radio" name="rad" checked=""/>单向关联<br />
+								<input type="radio" name="rad"/>双向关联<br />
+								<a href="">&gt;&gt;</a>
+								<a href="">&gt;</a>
+								<a href="">&lt;</a>
+								<a href="">&lt;&lt;</a>
+							</h4>
+							<h4 class="ri"></h4>
+							<span>确定</span>
+							<span>重置</span>
+						</div>
+						<div class="con-two con-relevance">
+							<h3>
+								<select name="" id="" style="width:138px">所有分类
+										<option value="">所有分类</option>
+										<option value="">手机</option>
+										<option value="">书</option>
+										<option value="">电影</option>
+								</select>
+								<select name="" id="" style="width:138px">所有品牌
+										<option value="">所有品牌</option>
+										<option value="">手机</option>
+										<option value="">书</option>
+										<option value="">电影</option>
+								</select>
+								<input type="text" />
+								<a href="">搜索</a>
+							</h3>
+							<b>可选商品</b>
+							<b>操作</b>
+							<b>跟该商品关联的商品</b>
+							<h4 class="le"></h4>
+							<h4 class="ce">
+								价格<br />
+								<input type="text" style="width:60px;"/>
+								<a href="">&gt;&gt;</a>
+								<a href="">&gt;</a>
+								<a href="">&lt;</a>
+								<a href="">&lt;&lt;</a>
+							</h4>
+							<h4 class="ri"></h4>
+							<span>确定</span>
+							<span>重置</span>
+						</div>
+						<div class="con-two con-relevance">
+							<h3>
+								文章标题
+								<input type="text" />
+								<a href="">搜索</a>
+							</h3>
+							<b>可选文章</b>
+							<b>操作</b>
+							<b>跟该商品关联的文章</b>
+							<h4 class="le"></h4>
+							<h4 class="ce">
+								价格<br />
+								<input type="text" style="width:60px;"/>
+								<a href="">&gt;&gt;</a>
+								<a href="">&gt;</a>
+								<a href="">&lt;</a>
+								<a href="">&lt;&lt;</a>
+							</h4>
+							<h4 class="ri"></h4>
+							<span>确定</span>
+							<span>重置</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+
+   $(".center .nav li").click(function(){
+   	$(".center .nav li").css("background-color","#eaeaea");
+   	$(this).css("background-color","#fff");
+   	$(".content-m div").css("display","none");
+   	var index = $(this).index();
+   	$(".content-m div").eq(index).css("display","block");
+   	
+   	
+   })
+ 
+    function addGoods(){
+		document.getElementById("frm").submit();
+		location.href="goods_list";
+	}
+</script>
