@@ -65,6 +65,7 @@
 										<a href="">操作</a>
 									</th>
 								</tr>
+								
 								<% for(var i=0;i<list.length;i++) { %>
 									<tr>
 										<th>
@@ -96,7 +97,7 @@
 											<a href=""><img title="搜索" src="images/icon_view.gif" alt="" /></a>
 											<a href=""><img title="编辑" src="images/icon_edit.gif" alt="" /></a>
 											<a href=""><img title="复制" src="images/icon_copy.gif" alt="" /></a>
-											<a class="remove" href="javascript:;" title="删除">
+											<a onclick="del('<%= list[i]._id%>')" href="javascript:;" title="删除">
 												<img src="images/icon_trash.gif" alt="" />
 											</a>
 										</th>
@@ -104,18 +105,34 @@
 								<% } %>
 							</tbody>
 						</table>
-					</div>
+						<% if(pageNo>1){%>
+							<a class="aa" href="/goods_list?pageNo=<%= pageNo -1%>&count=<%= count %>">上一页</a>
+						<%}%>
+		   			
+						<a class="aa" href="/goods_list?pageNo=<%= pageNo +1%>&count=<%= count %>">下一页</a>
+				</div>
+				
 			</div>							
 </body>
 </html>
 <script>
-	$(".th .remove").click(function(){
-	if(confirm("您确定要把该商品放入回收站吗？")){
-	    $(this).parent().parent().remove();	
-	  }
+	function del(gid){
+		$.ajax({
+			url:"/api/goods_del",
+			type:"get",
+			data:{
+				gid:gid
+			},
+			success:function(res){
+				console.log(res);
+				if(res.status==1&confirm("确定要将该商品加入回收站吗？")){
+					location.reload(true);
+				}else{
+					alert(res.message);
+				}
+			}
+		})
+	}
 	
-	});
 
-	
 </script>
-

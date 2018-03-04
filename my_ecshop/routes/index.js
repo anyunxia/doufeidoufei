@@ -9,13 +9,27 @@ router.get('/', function(req, res, next) {
   res.render('login', { title: '登录画面' });
 });
 
-
+//删除
+router.get('/api/goods_del', function(req, res){
+  GoodsModel.findByIdAndRemove({_id:req.query.gid},function(err){
+  	  var	result={
+  		status:1,
+  		message:"商品删除成功"
+  	};
+  	if(err){
+  		result.status = -119;
+  		result.message = "商品删除失败"
+  		console.log(err);
+  	}		
+	res.send(result);//把结果send出去
+  })
+});
 
 //后台页面
 router.get("/houtai",function(req,res){
 	if(req.session && req.session.username !=null){
 		res.render("houtai",{});
-	}else{
+	}else{	
 		res.redirect("/");
 	}
 	
@@ -24,10 +38,22 @@ router.get("/houtai",function(req,res){
 
 //商品列表
 router.get("/goods_list",function(req,res){
-	GoodsModel.find({},function(err,docs){
-		res.render("goods_list",{list:docs});
-	})
+	//分页
+	var pageNo =parseInt(req.query.pageNo || 1);//页码号：不传默认是第一页
+	var count = parseInt(req.query.count || 15);//每页显示数量，不传默认是3 
+	var query = GoodsModel.find({}).skip((pageNo-1)*count).limit(count).sort({date:1});
+	query.exec(function(err,docs){
+		res.render("goods_list",{list:docs,pageNo:pageNo,count:count});
+	});
+//	GoodsModel.find({},function(err,docs){
+//		res.render("goods_list",{list:docs,pageNo:pageNo,count:count});
+//	})
 })
+//个人资料
+router.get('/data', function(req, res){
+  res.render('data', {});
+});
+
 
 router.post("/api/add_goods",function(req,res){
 	var form = new multiparty.Form({

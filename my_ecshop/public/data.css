@@ -1,0 +1,98 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:12px; font-family:"微软雅黑";}
+input,a{outline:none;}
+body,html{
+	height:100%;
+	background:#DDDDDD;
+	width:100%;
+}
+
+.addnewgoods .main-con{
+	height:550px;
+	background:#fff;
+	border:1px solid #888888;
+	width:100%;
+	margin-top:10px;
+	
+}
+.addnewgoods .main-con input{
+	width:220px;
+	margin-left:15px;
+	margin-top:14px;
+}
+.addnewgoods .main-con p{
+	font-weight: 700;
+	font-size:14px;
+	margin-left:437px;
+}
+.addnewgoods .main-con p a{
+	color:red;
+	font-size:16px;
+	margin-left:8px;
+	vertical-align: middle;
+}
+.addnewgoods .main-con h3 div{
+	float:left;
+	margin-top:15px;
+}
+.addnewgoods .main-con h3{
+	height:264px;
+	margin-left:437px;
+}
+
+.addnewgoods .main-con h3 .left,.right{
+	width:112px;
+	height:202px;
+	overflow-y: scroll;
+	border:1px solid #808080;
+}
+.addnewgoods .main-con h3 .left li,.right li{
+	margin-top:10px;
+	text-align: center; 
+}
+.addnewgoods .main-con h3 .cent{
+	width:90px;
+	height:220px;
+	text-align: center;
+	padding-top: 29px;
+}
+.addnewgoods .main-con h3 .cent li{
+	width:60px;
+	height:28px;
+	background: red;
+	color:#fff;
+	text-align: center;
+	line-height:28px;
+	margin-top:10px;
+	border-radius: 3px;
+	margin-left:15px;
+}
+
+.addnewgoods .main-con h3 b{
+	float:left;
+	margin-right:10px;
+	margin-top:15px;
+}
+.addnewgoods .main-con .but{
+	width:60px;
+	height:28px;
+	background: red;
+	text-align: center;
+	line-height:28px ;
+	font-size:16px;
+	color:#fff;
+	border:none;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	cursor: pointer;
+	
+}
+
+.addnewgoods .main-con .butt{
+	margin-left:700px;
+}

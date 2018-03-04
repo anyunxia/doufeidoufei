@@ -7,6 +7,7 @@ h1,h2,h3,h4,h5,h6{font-weight:100;}
 body{font-size:12px; font-family:"微软雅黑";}
 input,a{outline:none;}
 body,html{
+	overflow: visible;
 	height:100%;
 	
 }
@@ -129,7 +130,7 @@ body,html{
 	height:100%;
 	background:#575757;
 	float:left;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 .content .con-left .con-left-nav{
 	padding-left:27px;
@@ -201,7 +202,7 @@ body,html{
 
 .content .con-right{
 	height:100%;
-	overflow: scroll;
+	overflow-y: scroll;
 	position: relative;
 	
 }
@@ -491,3 +492,27 @@ body,html{
 .goodslist .form-list table tbody .tr-head th{
 	background: #f3f3f3;
 }
+
+
+/*分页*/
+
+
+             /*.form-list{
+             		text-align: center;
+					width: 300px;
+					height: 30px;
+					border: 1px solid black;
+					float: left;
+					margin-left:900px;
+				}*/
+				.form-list .aa{
+					display: inline-block;
+					width:50px;
+					height:20px;
+					line-height:20px;
+					border:1px solid #ccc;
+					list-style: none;
+					padding: 0 5px;
+					margin-top:6px;
+					float:right;
+				}
